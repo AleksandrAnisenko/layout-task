@@ -13,51 +13,60 @@ header, section, footer {
 
 header {
     background-image: url(img/header.jpg);
-    background-size: auto;
-    padding: 40px 0 335px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 900px;
 }
 
 .container {
-    display: flex;
     max-width: 1110px;
     margin: 0 auto;
 }
 
 .nav-menu {
+    display: flex;
     justify-content: flex-end;
 }
 
-.nav-menu a {
+.nav-menu a, .fake-link {
     text-decoration: none;
-    justify-content: end;
     font-weight: 500;
     font-size: 16px;
     line-height: 20px;
-    margin-right: 40px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: #FFFFFF;
+    height: 100px;
+    box-sizing: border-box;
+    border-bottom: 2px solid transparent;
 }
 
-.nav-menu a:last-child {
-    margin: 0;
-    padding-bottom: 37px;
+.fake-link {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    display: none;
+}
+  
+.nav-menu a:hover {
+    border-color: #FFFFFF;
 }
 
-.nav-menu a:hover{
-    border-bottom: 2px solid #FFFFFF;
-}
-
-.line {
-    border-top: 1px solid rgba(161, 161, 161, 0.2);
-    margin-bottom: 204px;
-}
+.header-nav-wrapper {
+    border-bottom: 1px solid #A1A1A1;
+     margin-bottom: 220px;
+    }
 
 .preview-box  {
     flex-direction: column;
+    display: flex;
     align-items: center;
     color: #FFFFFF;
-}
+}    
 
-.preview-box p {
+.preview-box h6 {
     margin-bottom: 20px;
     font-weight: 500;
     font-size: 16px;
@@ -73,17 +82,70 @@ header {
     text-align: center;
 }
 
-.blue-button {
+.button {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 200px;
     height: 45px;
-    cursor: pointer;
     background-color: #4985FF;
-    box-shadow: 0px 0px 10px rgba(111, 111, 111, 0.25);
     border-radius: 30px;
     font-weight: 500;
     font-size: 16px;
     line-height: 20px;
 }
+
+.button:hover {
+    box-shadow: 0px 0px 10px rgba(111, 111, 111, 0.25);
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+@media  (max-width: 768px) {
+    header {
+      height: 700px;
+    }
+  
+    .nav-menu {
+      flex-direction: column;
+      align-items: center;
+      padding-top: 10px;
+      height: 16px;
+      overflow: hidden;
+    }
+  
+    .nav-menu a, .fake-link {
+      height: unset;
+      margin-bottom: 20px;
+    }
+  
+    .fake-link {
+      display: flex;
+    }
+  
+    .fake-link:hover ~ .nav-menu {
+      height: unset;
+      transition: all 0.25s ease-in-out;
+    }
+  
+    .preview-box {
+      padding: 0 10px;
+    }
+  
+    .preview-box h1 {
+      font-size: 28px;
+      line-height: 1.2;
+    }
+  
+    .header-nav-wrapper {
+      margin-bottom: 100px;
+    }
+  }
