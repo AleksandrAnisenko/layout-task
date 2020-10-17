@@ -56,14 +56,13 @@ header {
 
 .header-nav-wrapper {
     border-bottom: 1px solid #A1A1A1;
-     margin-bottom: 220px;
-    }
+    margin-bottom: 220px;
+}
 
 .preview-box  {
     flex-direction: column;
     display: flex;
     align-items: center;
-    color: #FFFFFF;
 }    
 
 .preview-box h6 {
@@ -71,6 +70,7 @@ header {
     font-weight: 500;
     font-size: 16px;
     line-height: 20px;
+    color: #FFFFFF;
 }
 
 .preview-box h1 {
@@ -80,6 +80,7 @@ header {
     line-height: 64px;
     max-width: 830px;
     text-align: center;
+    color: #FFFFFF;
 }
 
 .button {
@@ -93,6 +94,7 @@ header {
     font-weight: 500;
     font-size: 16px;
     line-height: 20px;
+    color: #FFFFFF;
 }
 
 .button:hover {
@@ -100,8 +102,90 @@ header {
     cursor: pointer;
 }
 
+.about-us {
+    padding: 110px 0 105px;
+}
 
+.about-us h2 {
+    margin: 0 auto 50px;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 53px;
+    text-align: center;
+    color: #323232;
+    max-width: 739px;
+}
 
+.lorem {
+    max-width: 740px;
+    margin: 0 auto 70px;
+    font-size: 16px;
+    line-height: 25px;
+    text-align: center;
+    color: #999999;
+}
+
+.mini-lorem-wrapper {
+    padding-top: 46px;
+}
+
+.about-us h3 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+    margin-bottom: 12px;
+}
+
+.mini-lorem {
+    font-size: 14px;
+    line-height: 22px;
+    color: #999999;
+    max-width: 222px;
+}
+
+.make-website-wrapper {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 55px;
+}
+
+.make-website {
+    display: flex;
+    justify-content: space-around;
+}
+
+.gray-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 110px;
+    height: 110px;
+    border: 1px solid #E0E0E0;
+    box-sizing: border-box;
+    border-radius: 50%;
+    margin-right: 17px;
+}
+
+.blue-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    height: 90px;
+    border: 1px solid #4985FF;
+    box-sizing: border-box;
+    border-radius: 50%;
+}
+
+.blue-circle img {
+    width: 40px;
+    height: 40px;
+}
+
+.about-us .button {
+    margin: 0 auto;
+}
 
 
 
@@ -148,4 +232,29 @@ header {
     .header-nav-wrapper {
       margin-bottom: 100px;
     }
+
+    .make-website-wrapper {
+        flex-direction: column;
+    }
+
+    .make-website {
+        justify-content: center;
+    }
+
+    .about-us h2 {
+        padding: 0 10px;
+        font-size: 28px;
+        line-height: 1.2;
+    }
+
+    .about-us .mini-lorem {
+        padding: 0 10px;
+    }
+
+  }
+
+  @media  (max-width: 1024px) {
+      .make-website-wrapper {
+          padding: 0 10px;
+      }
   }
